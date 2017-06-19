@@ -2,7 +2,7 @@
 <!-- need <%= %> to print in ruby on web -->
 
 <% @posts.each do |post| %>
-<!-- to make link in ruby use build in function link_to [takes 2 parameters, title, where] -->
+<!-- to make link in ruby use build in function link_to helper[takes 2 parameters, title, where] -->
 	<h3><%= link_to post.title,post %></h3>
 	<p><%= post.body %></p>
 	<hr>
