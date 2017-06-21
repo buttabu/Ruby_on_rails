@@ -6,21 +6,25 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @categories }
-    end
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @categories }
+    # end
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @category = Category.find(params[:id])
+    # @category = Category.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @category }
-    end
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @category }
+    # end
+    
+    @category = Category.find(params[:id])
+    @title = @category.name
+    @posts = @category.posts
   end
 
 #   # GET /categories/new
@@ -72,14 +76,14 @@ class CategoriesController < ApplicationController
 #     end
 #   end
 
-#   private
-#     # Use callbacks to share common setup or constraints between actions.
-#     def set_category
-#       @category = Category.find(params[:id])
-#     end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_category
+      @category = Category.find(params[:id])
+    end
 
-#     # Never trust parameters from the scary internet, only allow the white list through.
-#     def category_params
-#       params.require(:category).permit(:name)
-#     end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def category_params
+      params.require(:category).permit(:name)
+    end
 end

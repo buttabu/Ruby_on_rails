@@ -1,16 +1,9 @@
 <h1>Listing categories</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<ul>
 <% @categories.each do |category| %>
-  <tr>
-    <td><%= category.name %></td>
-  </tr>
+  <li>
+    <%= link_to category.name, category %></td>
+  </li>
 <% end %>
-</table>
+</ul>
