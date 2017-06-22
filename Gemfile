@@ -11,6 +11,13 @@ gem 'rails', '~> 5.1.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg'
+gem 'activeadmin'
+
+gem 'devise'
+gem 'cancan' # or cancancan
+gem 'draper'
+gem 'pundit'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
