@@ -1,0 +1,7 @@
+<h1>Welcome To Abu's Ruby Blog</h1>
+<p>This is some information about my Blog</p>
+<% @posts.each do |post| %>
+	<h3><%= link_to post.title,post %></h3>
+	<p><%= post.body %></p>
+	<hr>
+<% end %>
