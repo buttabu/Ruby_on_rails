@@ -4743,3 +4743,726 @@ Processing by PagesController#about as HTML
 Completed 200 OK in 137ms (Views: 133.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/about" for 127.0.0.1 at 2017-06-23 17:19:39 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 17:21:00 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (12.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (26.3ms)
+  Rendered partials/_header.html.erb (1135.7ms) [cache miss]
+Completed 200 OK in 1176ms (Views: 1156.3ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 17:23:18 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered partials/_header.html.erb (156.0ms) [cache miss]
+  Rendered partials/_sidebar.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 176ms (Views: 173.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 17:27:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (18.4ms)
+  Rendered partials/_header.html.erb (186.4ms) [cache miss]
+  [1m[36mCategory Load (18.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (26.8ms) [cache miss]
+Completed 200 OK in 248ms (Views: 219.3ms | ActiveRecord: 25.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 17:29:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+  Rendered partials/_header.html.erb (107.7ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.1ms) [cache miss]
+Completed 200 OK in 128ms (Views: 125.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/7" for 127.0.0.1 at 2017-06-23 17:29:10 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 7]]
+  Rendered categories/show.html.erb within layouts/application (13.8ms)
+  Rendered partials/_header.html.erb (115.7ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 200ms (Views: 142.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:29:12 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (15.1ms)
+  Rendered partials/_header.html.erb (107.4ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (1.9ms) [cache miss]
+Completed 200 OK in 144ms (Views: 138.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/9" for 127.0.0.1 at 2017-06-23 17:29:17 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 9]]
+  Rendered categories/show.html.erb within layouts/application (2.3ms)
+  Rendered partials/_header.html.erb (114.4ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.0ms) [cache miss]
+Completed 200 OK in 138ms (Views: 132.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/12" for 127.0.0.1 at 2017-06-23 17:29:20 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 12]]
+  Rendered categories/show.html.erb within layouts/application (2.0ms)
+  Rendered partials/_header.html.erb (103.4ms) [cache miss]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.0ms) [cache miss]
+Completed 200 OK in 128ms (Views: 122.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/13" for 127.0.0.1 at 2017-06-23 17:29:22 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 13]]
+  Rendered categories/show.html.erb within layouts/application (3.1ms)
+  Rendered partials/_header.html.erb (121.3ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.0ms) [cache miss]
+Completed 200 OK in 148ms (Views: 141.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/13" for 127.0.0.1 at 2017-06-23 17:30:35 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 13]]
+  Rendered categories/show.html.erb within layouts/application (1.9ms)
+  Rendered partials/_header.html.erb (114.9ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.8ms) [cache miss]
+Completed 200 OK in 137ms (Views: 132.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/13" for 127.0.0.1 at 2017-06-23 17:30:36 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 13]]
+  Rendered categories/show.html.erb within layouts/application (2.2ms)
+  Rendered partials/_header.html.erb (132.6ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.4ms) [cache miss]
+Completed 200 OK in 153ms (Views: 149.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/13" for 127.0.0.1 at 2017-06-23 17:30:37 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 13]]
+  Rendered categories/show.html.erb within layouts/application (2.1ms)
+  Rendered partials/_header.html.erb (137.1ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.4ms) [cache miss]
+Completed 200 OK in 159ms (Views: 154.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/13" for 127.0.0.1 at 2017-06-23 17:30:50 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 13]]
+  Rendered categories/show.html.erb within layouts/application (2.2ms)
+  Rendered partials/_header.html.erb (129.8ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.2ms) [cache miss]
+Completed 200 OK in 152ms (Views: 146.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:30:58 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (2.7ms)
+  Rendered partials/_header.html.erb (112.5ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.0ms) [cache miss]
+Completed 200 OK in 137ms (Views: 130.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-06-23 17:30:59 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.7ms)
+  Rendered partials/_header.html.erb (146.3ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.8ms) [cache miss]
+Completed 200 OK in 172ms (Views: 164.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-06-23 17:31:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+  Rendered partials/_header.html.erb (116.4ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.3ms) [cache miss]
+Completed 200 OK in 138ms (Views: 133.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-23 17:31:36 -0400
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered partials/_header.html.erb (118.5ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.9ms) [cache miss]
+Completed 200 OK in 137ms (Views: 133.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 17:31:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_header.html.erb (114.9ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.3ms) [cache miss]
+Completed 200 OK in 140ms (Views: 136.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:31:38 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered partials/_header.html.erb (119.4ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.3ms) [cache miss]
+Completed 200 OK in 149ms (Views: 136.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:32:19 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered partials/_header.html.erb (148.4ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.9ms) [cache miss]
+Completed 200 OK in 170ms (Views: 166.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-06-23 17:32:28 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+  Rendered partials/_header.html.erb (104.5ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.8ms) [cache miss]
+Completed 200 OK in 136ms (Views: 121.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:32:29 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+  Rendered partials/_header.html.erb (129.7ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.2ms) [cache miss]
+Completed 200 OK in 160ms (Views: 156.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-06-23 17:32:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.4ms)
+  Rendered partials/_header.html.erb (122.1ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.2ms) [cache miss]
+Completed 200 OK in 158ms (Views: 152.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:32:30 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (3.0ms)
+  Rendered partials/_header.html.erb (124.3ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.0ms) [cache miss]
+Completed 200 OK in 157ms (Views: 142.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2017-06-23 17:32:31 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.0ms)
+  Rendered partials/_header.html.erb (120.2ms) [cache miss]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.8ms) [cache miss]
+Completed 200 OK in 145ms (Views: 139.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-23 17:32:33 -0400
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered partials/_header.html.erb (106.7ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.4ms) [cache miss]
+Completed 200 OK in 134ms (Views: 122.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 17:32:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+  Rendered partials/_header.html.erb (123.9ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.4ms) [cache miss]
+Completed 200 OK in 150ms (Views: 140.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:32:34 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+  Rendered partials/_header.html.erb (129.9ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.9ms) [cache miss]
+Completed 200 OK in 161ms (Views: 157.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-06-23 17:32:35 -0400
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered partials/_header.html.erb (120.4ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.1ms) [cache miss]
+Completed 200 OK in 148ms (Views: 136.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2017-06-23 17:32:37 -0400
+Processing by PagesController#resources as HTML
+  Rendering pages/resources.html.erb within layouts/application
+  Rendered pages/resources.html.erb within layouts/application (0.5ms)
+  Rendered partials/_header.html.erb (117.3ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.5ms) [cache miss]
+Completed 200 OK in 149ms (Views: 136.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2017-06-23 17:34:28 -0400
+Processing by PagesController#resources as HTML
+  Rendering pages/resources.html.erb within layouts/application
+  Rendered pages/resources.html.erb within layouts/application (0.3ms)
+  Rendered partials/_header.html.erb (123.2ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.5ms) [cache miss]
+Completed 200 OK in 139ms (Views: 137.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/7" for 127.0.0.1 at 2017-06-23 17:34:30 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 7]]
+  Rendered categories/show.html.erb within layouts/application (2.0ms)
+  Rendered partials/_header.html.erb (116.2ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.2ms) [cache miss]
+Completed 200 OK in 142ms (Views: 135.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:34:32 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (3.4ms)
+  Rendered partials/_header.html.erb (111.9ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.2ms) [cache miss]
+Completed 200 OK in 140ms (Views: 134.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-06-23 17:34:33 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.9ms)
+  Rendered partials/_header.html.erb (112.8ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.0ms) [cache miss]
+Completed 200 OK in 141ms (Views: 135.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:34:34 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (4.0ms)
+  Rendered partials/_header.html.erb (126.9ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.2ms) [cache miss]
+Completed 200 OK in 160ms (Views: 152.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:36:20 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (2.8ms)
+  Rendered partials/_header.html.erb (135.5ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.7ms) [cache miss]
+Completed 200 OK in 157ms (Views: 153.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 17:36:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  Rendered partials/_header.html.erb (168.1ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.2ms) [cache miss]
+Completed 200 OK in 194ms (Views: 190.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-23 17:36:25 -0400
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered partials/_header.html.erb (122.2ms) [cache miss]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.6ms) [cache miss]
+Completed 200 OK in 144ms (Views: 141.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:36:26 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+  Rendered partials/_header.html.erb (142.5ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.3ms) [cache miss]
+Completed 200 OK in 167ms (Views: 162.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/7" for 127.0.0.1 at 2017-06-23 17:36:36 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 7]]
+  Rendered categories/show.html.erb within layouts/application (2.0ms)
+  Rendered partials/_header.html.erb (112.4ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.2ms) [cache miss]
+Completed 200 OK in 136ms (Views: 130.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:36:43 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (5.6ms)
+  Rendered partials/_header.html.erb (123.8ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.1ms) [cache miss]
+Completed 200 OK in 168ms (Views: 158.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:39:50 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (2.4ms)
+  Rendered partials/_header.html.erb (112.7ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.8ms) [cache miss]
+Completed 200 OK in 133ms (Views: 128.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:39:52 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (2.9ms)
+  Rendered partials/_header.html.erb (117.1ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.9ms) [cache miss]
+Completed 200 OK in 143ms (Views: 137.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/7" for 127.0.0.1 at 2017-06-23 17:39:54 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 7]]
+  Rendered categories/show.html.erb within layouts/application (2.0ms)
+  Rendered partials/_header.html.erb (110.8ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.5ms) [cache miss]
+Completed 200 OK in 135ms (Views: 129.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:39:55 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (4.7ms)
+  Rendered partials/_header.html.erb (131.3ms) [cache miss]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.4ms) [cache miss]
+Completed 200 OK in 164ms (Views: 157.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories/9" for 127.0.0.1 at 2017-06-23 17:39:56 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 9]]
+  Rendered categories/show.html.erb within layouts/application (2.3ms)
+  Rendered partials/_header.html.erb (119.2ms) [cache miss]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.5ms) [cache miss]
+Completed 200 OK in 146ms (Views: 140.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/12" for 127.0.0.1 at 2017-06-23 17:39:57 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 12]]
+  Rendered categories/show.html.erb within layouts/application (2.0ms)
+  Rendered partials/_header.html.erb (121.5ms) [cache miss]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.2ms) [cache miss]
+Completed 200 OK in 145ms (Views: 140.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/13" for 127.0.0.1 at 2017-06-23 17:39:59 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 13]]
+  Rendered categories/show.html.erb within layouts/application (1.9ms)
+  Rendered partials/_header.html.erb (133.9ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (3.1ms) [cache miss]
+Completed 200 OK in 162ms (Views: 155.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2017-06-23 17:40:00 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (4.3ms)
+  Rendered partials/_header.html.erb (137.5ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.7ms) [cache miss]
+Completed 200 OK in 172ms (Views: 164.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-06-23 17:40:26 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+  Rendered partials/_header.html.erb (126.5ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.8ms) [cache miss]
+Completed 200 OK in 153ms (Views: 147.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:40:27 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+  Rendered partials/_header.html.erb (100.0ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (2.2ms) [cache miss]
+Completed 200 OK in 123ms (Views: 119.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:43:14 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.5ms)
+  Rendered partials/_header.html.erb (117.4ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (174.4ms)
+Completed 500 Internal Server Error in 318ms (ActiveRecord: 7.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `all_posts' for #<PostsController:0x007f9191ea70c0>
+Did you mean?  all_post):
+    35:             <li>
+    36:               <h2>Blogroll</h2>
+    37:               <ul>
+    38:                 <% all_posts.each do |post| %>
+    39:                   <li><%= link_to post.title,post_path(:id => post.id) %></li>
+    40:                 <% end %>
+    41:               </ul>
+  
+app/views/partials/_sidebar.html.erb:38:in `_app_views_partials__sidebar_html_erb___2730988510091902993_70131625540900'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__4310187709825909759_70131650184340'
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:43:40 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_header.html.erb (160.3ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_sidebar.html.erb (389.1ms)
+Completed 500 Internal Server Error in 567ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `all_post' for #<#<Class:0x007f91925ab0b0>:0x007f9196cc4af0>
+Did you mean?  all_posts):
+    35:             <li>
+    36:               <h2>Blogroll</h2>
+    37:               <ul>
+    38:                 <% all_post.each do |post| %>
+    39:                   <li><%= link_to post.title,post_path(:id => post.id) %></li>
+    40:                 <% end %>
+    41:               </ul>
+  
+app/views/partials/_sidebar.html.erb:38:in `_app_views_partials__sidebar_html_erb___2730988510091902993_70131650102480'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__4310187709825909759_70131597163620'
+Started GET "/posts" for 127.0.0.1 at 2017-06-23 17:43:51 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (14.8ms)
+  Rendered partials/_header.html.erb (179.9ms) [cache miss]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered partials/_sidebar.html.erb (8.5ms) [cache miss]
+Completed 200 OK in 216ms (Views: 208.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-06-23 17:44:02 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+  Rendered partials/_header.html.erb (112.7ms) [cache miss]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered partials/_sidebar.html.erb (4.7ms) [cache miss]
+Completed 200 OK in 142ms (Views: 135.6ms | ActiveRecord: 1.3ms)
+
+

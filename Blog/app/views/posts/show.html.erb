@@ -1,3 +1,4 @@
+<div class="post">
 <h1><%= @post.title %></h1>
 <!-- strftime is used to format the date(month, day, year) -->
 <small><%=  @post.created_at.strftime("%b %d. %Y") %></small>
@@ -9,3 +10,4 @@
 <!-- showing the catergory-->
 <p>Catergory: <%= link_to @post.category.name, category_path(:id => @post.category.id) %></p>
 <p><%= link_to 'Back', posts_path %></p>
+</div>

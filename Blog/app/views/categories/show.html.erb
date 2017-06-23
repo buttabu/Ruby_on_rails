@@ -1,21 +1,13 @@
-<!--<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
- -->
-
-  <h1><%= @category.name %></h1>
 <% if @posts.each do |post| %>
-	<h3><%= link_to post.title,post %></h3>
-	<p><%= post.body %></p>
+<div class="post">
+<h2 class="title"><%= link_to post.title,post %></h2>
+	<div class="entry"><%= post.body %></div>
+	<div class="byline">
+	<p class="meta">May 07, 2012 Posted by <a href="#">Someone</a></p>
+	<p class="links"><a href="post.html">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" title="b0x w">Comments</a></p>
+	</div>
+</div>
 <% end.empty? %>
-	<p>Sorry, there are no posts in this category</p>
+	<p style="color:white">Sorry, there are no posts in this category</p>
 <% end %>
-	<%= link_to "Back to Categories",categories_path %>  
 

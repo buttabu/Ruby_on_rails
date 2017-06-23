@@ -1,11 +1,10 @@
-<h1>Blog Posts</h1>
-<!-- need <%= %> to print in ruby on web -->
-
 <% @posts.each do |post| %>
-<!-- to make link in ruby use build in function link_to helper[takes 2 parameters, title, where] -->
-	<h3><%= link_to post.title,post %></h3>
-	<p><%= post.body %></p>
-	<hr>
+<div class="post">
+<h2 class="title"><%= link_to post.title,post %></h2>
+	<div class="entry"><%= post.body %></div>
+	<div class="byline">
+	<p class="meta">May 07, 2012 Posted by <a href="#">Someone</a></p>
+	<p class="links"><a href="post.html">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" title="b0x w">Comments</a></p>
+	</div>
+</div>
 <% end %>
-<!-- creating a link to get to new post page -->
-<!--<%= link_to 'Add new Post', new_post_path%>-->
