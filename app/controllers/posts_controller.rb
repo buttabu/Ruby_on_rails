@@ -50,9 +50,19 @@ class PostsController < ApplicationController
 		redirect_to posts_path, :notice => "Your post has been deleted"
 	end
 
-	private
+	# private
 
-	def post_params
- 	 params.require(:post).permit!
-	end
+	# def post_params
+ # 	 params.require(:post).permit!
+	# end
+	private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_post
+      @category = Post.find(params[:id])
+    end
+
+ #    #Never trust parameters from the scary internet, only allow the white list through.
+    def post_params
+      params.require(:post).permit(:name, :body, :category_id, :author_id)
+    end
 end
