@@ -1,7 +1,25 @@
-<h1>Welcome To Abu's Ruby Blog</h1>
-<p>This is some information about my Blog</p>
+<!-- <p>This is some information about my Blog</p>
 <% @posts.each do |post| %>
-	<h3><%= link_to post.title,post %></h3>
-	<p><%= post.body %></p>
-	<hr>
+<div class ="post"> 
+	<h2 class="title"><%= link_to post.title,post %></h2>
+	<div class ="entry"><%= post.body %></div>
+	<div class="byline">
+         <p class="meta">May 07, 2012 Posted by <a href="#">Someone</a></p>
+        <p class="links"><a href="post.html">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" title="b0x w">Comments</a></p>
+            </div>
+</div>
 <% end %>
+ -->
+
+ <% @posts.each do |post| %>
+<div class="post">
+<h2 class="title"><%= link_to post.title,post %></h2>
+	<div class="entry"><%= post.body %></div>
+	<div class="byline">
+	<p class="meta">May 07, 2012 Posted by <a href="#">Someone</a></p>
+	<p class="links"><a href="post.html">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" title="b0x w">Comments</a></p>
+						</div>
+</div>
+<% end %>
+
+
