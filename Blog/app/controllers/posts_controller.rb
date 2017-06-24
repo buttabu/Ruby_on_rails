@@ -5,6 +5,8 @@ class PostsController < ApplicationController
 		
 		#instance variable to print Posts in an array
 		@posts = Post.all
+		# @search = Post.search(params[:search])
+		# @posts = @search.result
 	end
 
 	def show

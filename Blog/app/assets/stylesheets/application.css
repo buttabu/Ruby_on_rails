@@ -139,7 +139,7 @@ a:hover {
 	padding: 20px 0px 0px 0px;
 }
 
-#search form {
+/*#search form {
 	height: 41px;
 	margin: 0;
 	padding: 10px 0 0 0px;
@@ -168,8 +168,10 @@ a:hover {
 	border: none;
 	background: #D93544;
 	color: #FFFFFF;
+}*/
+#search input[type="text"]{
+	width:180px;
 }
-
 /* Menu */
 
 #menu {
