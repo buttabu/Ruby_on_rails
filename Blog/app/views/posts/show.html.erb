@@ -2,6 +2,7 @@
 <h1><%= @post.title %></h1>
 <!-- strftime is used to format the date(month, day, year) -->
 <small><%=  @post.created_at.strftime("%b %d. %Y") %></small>
+<p>Created By : <%= @post.admin_user.name %></p>
 <p><%=  @post.body %></p>
 <!--<%= link_to "Edit Post", edit_post_path %> |
 <%= link_to "Delete Post", @post, :confirm => "Are you sure you want to delete?",:method => :delete%>-->
@@ -10,4 +11,34 @@
 <!-- showing the catergory-->
 <p>Catergory: <%= link_to @post.category.name, category_path(:id => @post.category.id) %></p>
 <p><%= link_to 'Back', posts_path %></p>
+
+<hr />
+<h3>Add A Comment</h3>
+<%= form_for @post_comment do|f| %>
+ 
+  <%= f.hidden_field :post_id %>
+
+  <p>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Post Comment" %>
+  </p>
+<% end %>
+<br/>
+<h3>Any Previous Comments</h3>
+<br/>
+<%= render :partial => 'partials/post_comment', :collection => @post.post_comments %> 
 </div>

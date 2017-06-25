@@ -12,6 +12,8 @@ class PostsController < ApplicationController
 	def show
 		#get the id from the url and check in the database
 		@post = Post.find(params[:id]);
+		@user = AdminUser.all
+		@post_comment = PostComment.new(:post=> @post)
 	end
 
 	def new

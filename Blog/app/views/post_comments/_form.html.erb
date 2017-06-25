@@ -1,0 +1,37 @@
+<p style="color:white;"><%= form_with(model: post_comment, local: true) do |form| %></p>
+  <% if post_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2 style="color:white;"><%= pluralize(post_comment.errors.count, "error") %> prohibited this post_comment from being saved:</h2>
+
+      <ul style="color:white;"> 
+      <% post_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field" style="color:white;">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :post_comment_name %>
+  </div>
+
+  <div class="field" style="color:white;">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :post_comment_email %>
+  </div>
+ 
+  <div class="field" style="color:white;">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :post_comment_body %>
+  </div>
+
+  <div class="field" style="color:white;">
+    <%= form.label :post_id %>
+    <%= form.text_field :post_id, id: :post_comment_post_id %>
+  </div>
+
+  <div class="actions" style="color:white;">
+    <%= form.submit %>
+  </div>
+<% end %>

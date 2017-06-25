@@ -2,12 +2,12 @@
           <ul>
             <li>
               <div id="search" >
-                <form method="get" action="#">
+               <!--  <form method="get" action="#">
                   <div>
                     <input type="text" name="s" id="search-text" value="" />
                     <input type="submit" id="search-submit" value="GO" />
                   </div>
-                </form>
+                </form> -->
                
               </div>
               <div style="clear: both;">&nbsp;</div>
@@ -22,11 +22,6 @@
             <li>
               <h2>Categories</h2>
               <ul>
-                <!-- <li><a href="#">Ruby Programming Language</a></li>
-                <li><a href="#">Ruby on Rails Framework</a></li>
-                <li><a href="#">MVC Stuff</a></li>
-                <li><a href="#">Learn Linux</a></li>
-                <li><a href="#">Other Languages</a></li> -->
                 <% all_categories.each do |cat| %>
                   <li><%= link_to cat.name,category_path(:id => cat.id) %></li>
                 <% end %>
