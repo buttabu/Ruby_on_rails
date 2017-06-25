@@ -1,0 +1,109 @@
+gem: is a prepackaged module
+
+to user search in RubyonRails :
+		gem called metasearch
+		write gem 'meta_search' in the gem file
+		run bundle install
+to create resources for active_admin:
+				rails generate active_admin:resource Post
+
+
+to create a controller:
+go to the directory-> rails generate controller home index
+routes.rb has the controller name root : to=> 'home#index'
+to create an active admin: => put active admin in the gem file gem 'activeadmin'
+				then bundle install
+				then rails g active_admin:install
+				then rake db:migrate
+
+GIT AND Heroku:
+Heroku: is a cloud platform as a services that support several
+programming languages.
+new way of building apps using git
+How to implement heroku:
+Download the heroku tool belt which insludes git and bash command toll 
+setup a database
+create a git repository
+push and deploy the app via heroku
+
+create an app in heroku:
+heroku create appname
+To create a staging app:
+heroku create appname --remote staging
+to check the routes of an app => rake routes
+
+
+database stored in:=> /Library/PostgreSQL/9.2   /Library/PostgreSQL/9.2/data
+port # 5432
+to create a new rails app: rails new appname, bundle install, rails server
+Heroku login:   type heroku login
+		     heroku create
+			 git push heroku master
+
+create a new key: heroku keys:add
+SSH keys: to generate => Heroku ssh-keygen
+rename app name: heroku apps:rename new appname --app oldappname
+
+irb:
+no semicolons
+to declare a variable in irb => person ="Brad"
+to check if a varaible is local or not => defined?x
+create a method: def mymethod
+ put everything in the method
+to finish method: type end
+no curly braces:
+to run the method => just call it, mymethod
+
+for parameters method: def sayit(word)
+to check the methods on the string => "abu".methods.sort
+		
+CREate an array:
+mynumbers = [12, 8, 22, 72, 33]
+function for an array : .sort and .reverse
+Hash: user = {'first_name' => 'John', 'last_name' => 'Smith', }
+to print Hash: print user['first_name]...... functions on HASH => .sort, .size
+To create A hash in array => user = [{"first_name" => "abu", "last_name" => "butt", ""=>"", ""=>"", }]
+
+Loops: 5.times { puts "This is a loop"}
+upto method => 3.upto<10> {puts "this is abu butt"}
+downto method => 3.downto<10> {puts "this is abu butt"}
+
+
+while loop: x = 0, limit= 7, while x < limit
+			     puts x
+			     x += 1
+				end
+for each loop: planets = ["earth","saturn","",...]
+	planets.each{|x| puts x }
+
+
+objects: class Car 
+	attr_accessor :make, :model, :color
+	end 
+create an object:
+	car1 = Car.new
+Add properties:
+	car1.make = "honda"
+	car1.model = "civic"
+	car1.color = "blue"
+print car1.make,.....
+
+Class methods:
+	Class Car
+	def drive
+	print "Driving"
+	end
+	end
+Inheritance: 
+	class Vehicle
+	atrr_accessor :make, :color, :year
+	end
+	
+	class Car < Vehicle
+	attr_accessor :fourwheel
+	end
+
+	car1 = Car.new 
+	car1.make = 'BMW'
+	car1.color = 'Blue'
+	car1.fourwheel = 0
